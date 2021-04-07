@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import About from '../views/About.vue'
 import Home from '../views/Home.vue'
 import IncompletedCorpses from '../views/IncompletedCorpses.vue'
-import CompletedCorpse from '../views/CompletedCorpse.vue'
-import CorpseBody from '../views/corpse-creater/CorpseBody.vue'
-import CorpseHead from '../views/corpse-creater/CorpseHead.vue'
-import CorpseLegs from '../views/corpse-creater/CorpseLegs.vue'
+import CompletedCorpses from '../views/CompletedCorpses.vue'
+import CorpseBody from '../views/corpse-creator/CorpseBody.vue'
+import CorpseHead from '../views/corpse-creator/CorpseHead.vue'
+import CorpseLegs from '../views/corpse-creator/CorpseLegs.vue'
+
 
 Vue.use(VueRouter)
 
@@ -17,13 +17,9 @@ const routes = [
     name: 'Home',
     component: Home
   }, {
-    path: '/about',
-    name: 'About',
-    component: About
-  }, {
-    path: '/completed-corpse',
-    name: 'CompletedCorpse',
-    component: CompletedCorpse
+    path: '/completed-corpses',
+    name: 'CompletedCorpses',
+    component: CompletedCorpses
   },  {
     path: '/incompleted-corpses',
     name: 'IncompletedCorpses',
@@ -44,7 +40,6 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
